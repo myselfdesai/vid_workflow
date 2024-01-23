@@ -1,0 +1,24 @@
+FTP:
+  host: localhost
+  user: vivek
+  password: Vivek@123 # can also be read from AWS Secret Manager
+  storage_dir: Downloads
+  file_types: mxf # can be enhanced to comma seperated file extensions 
+  read_chunk_size: 1000000
+AWS:
+  Access:
+    key_id: 
+    secret_key: 
+  S3:
+    bucket: bucket-name
+    storage_dir: sports-catalog/sports-sub-catalog
+Disk:
+  storage_dir: /home/vivek/encoding_source
+  encoded_dir: /home/vivek/encoded_files
+Profiles:
+  144p:
+    bitrate: 144k
+    resolution: 100x80
+  200p:
+    bitrate: 200k
+    resolution: 200x150
