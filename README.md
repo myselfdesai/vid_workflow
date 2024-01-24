@@ -21,30 +21,30 @@ OS: Ubuntu 22.04.3 LTS
 ## Operations Handled as part of current script
 
 ### 1. Source files from local FTP server
-![Source Files from FTP](./1-Source-files-from-FTP.png?raw=true "Source Files from FTP")
+![Source Files from FTP](./images/1-Source-files-from-FTP.png?raw=true "Source Files from FTP")
 
 
 ### 2. Source files being downloaded from local FTP server. Progress and status of download operation  can also be seen.
-![Files-being-read-from-FTP](./2-Files-being-read-from-FTP.png?raw=true "Files-being-read-from-FTP")
+![Files-being-read-from-FTP](./images/2-Files-being-read-from-FTP.png?raw=true "Files-being-read-from-FTP")
 
 
 ### 3. Source files in local Disk. We can notice that files have been renamed to remove 'ID' and also post download we deleted corrupted/partial-uploads because of this file 'test.mxf' is not visible.
-![Source-Files-in-Local_Disk](./3-Source-Files-in-Local_Disk.png?raw=true "Source-Files-in-Local_Disk")
+![Source-Files-in-Local_Disk](./images/3-Source-Files-in-Local_Disk.png?raw=true "Source-Files-in-Local_Disk")
 
 
 ### 4. Validating corrupt and valid Downloaded Files
-![Validating corrupt downloaded File](./4-Validation-vod-files.png?raw=true "Validating corrupt downloaded file File")
-![Validating valid downloaded File](./5-file-validation.png?raw=true "Validating valid downloaded File")
+![Validating corrupt downloaded File](./images/4-Validation-vod-files.png?raw=true "Validating corrupt downloaded file File")
+![Validating valid downloaded File](./images/5-file-validation.png?raw=true "Validating valid downloaded File")
 
 
 ### 5. Validating Transcoding Operation for given profiles.
-![Validating Transcoding Operation](./6-Validate-transcode-operation.png?raw=true "Validating Transcoding Operation")
+![Validating Transcoding Operation](./images/6-Validate-transcode-operation.png?raw=true "Validating Transcoding Operation")
 
 
 ### 6. Transcoded Files in Local Disk.
-![Transcoded Files in Local Disk](./7-Transcoded-Files-In-Local_Disk.png?raw=true "Transcoded Files in Local Disk")
+![Transcoded Files in Local Disk](./images/7-Transcoded-Files-In-Local_Disk.png?raw=true "Transcoded Files in Local Disk")
 
 
 ## High Level Design of Basic Video Transcoding Workflow
 (Scope of work is limited to simulate file operations in VoD encoding workflow) 
-![High Level Video Encoding Flow](./Vide-Encoding-HLD.png?raw=true "High Level Video Encoding Flow")
+![High Level Video Encoding Flow](./images/Vide-Encoding-HLD.png?raw=true "High Level Video Encoding Flow")
