@@ -6,12 +6,13 @@ FTP:
   file_types: mxf # can be enhanced to comma seperated file extensions 
   read_chunk_size: 1000000
 AWS:
+  Region: us-east-1
   Access:
-    key_id: 
-    secret_key: 
+    key_id: key_id
+    secret_key: secret_key
   S3:
-    bucket: bucket-name
-    storage_dir: sports-catalog/sports-sub-catalog
+    bucket: resublime-reach-testing
+    storage_dir: vod-catalog/sports-catalog
 Disk:
   storage_dir: /home/vivek/encoding_source
   encoded_dir: /home/vivek/encoded_files

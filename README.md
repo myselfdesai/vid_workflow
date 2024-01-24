@@ -44,7 +44,21 @@ OS: Ubuntu 22.04.3 LTS
 ### 6. Transcoded Files in Local Disk.
 ![Transcoded Files in Local Disk](./images/7-Transcoded-Files-In-Local_Disk.png?raw=true "Transcoded Files in Local Disk")
 
+### 7. Transcoded Files being uploaded to S3.
+![Transcoded Files being uploaded to S3](./images/8-Files-being-uploaded-to-S3.png?raw=true "Transcoded Files being uploaded to S3")
+
+
+### 8. Transcoded Files in S3 Storage.
+![Transcoded Files in S3 Storage](./images/9-Files-from-s3-storage.png?raw=true "Transcoded Files in S3 Storage")
+
+
+### 9. Local Disk clean-up post successful upload.
+![Local Disk clean-up post successful upload](./images/10-Disk-cleanup.png?raw=true "Local Disk clean-up post successful upload")
 
 ## High Level Design of Basic Video Transcoding Workflow
 (Scope of work is limited to simulate file operations in VoD encoding workflow) 
 ![High Level Video Encoding Flow](./images/Vide-Encoding-HLD.png?raw=true "High Level Video Encoding Flow")
+
+## Contribution
+Script can be enhanced to support content ingestion from different sources like sftp, s3, https and also multiple storage related protocols can be integrated as part of uploading workflow. FFMPEG command can be tweaked as per video quality expectations. Error handling can aslo be considered.
+

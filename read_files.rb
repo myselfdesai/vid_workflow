@@ -3,8 +3,6 @@ require 'net/sftp'
 
 # To download files from FTP server
 def ftp_read(ftp_config, disk_config)
-  puts "\n in FTP Read"
-
   # Connect to FTP server
   Net::FTP.open(
     ftp_config["host"],

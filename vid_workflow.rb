@@ -18,14 +18,29 @@ end
 
 begin
   workflow_configs = YAML.load_file('./config.yaml')
-  puts "\nworkflow_configs: #{workflow_configs}"
+
+  # Ensure local directory for FTP download is ready
   create_directory(workflow_configs["Disk"]["storage_dir"])
+
+  # Download Files from FTP
   ftp_read(workflow_configs["FTP"], workflow_configs["Disk"])
 
+  # Validate source files and delete corrupt/partial-uploads
   validate_source_files(workflow_configs["Disk"]["storage_dir"])
 
+  # Create local directory for storing transcoded output files.
   create_directory(workflow_configs["Disk"]["encoded_dir"])
+
+  # Rename downloaded source files to remove 'ID'
   rename_source_files(workflow_configs["Disk"]["storage_dir"])
+
+  # Transcode downloaded files to given profiles
   transcode_vod_files(workflow_configs["Profiles"], workflow_configs["Disk"]["storage_dir"], workflow_configs["Disk"]["encoded_dir"])
+
+  # Upload
   s3_write(workflow_configs["Disk"]["encoded_dir"], workflow_configs["AWS"])
+
+  # Delete all source and encoded files to keep disk clean for new operations
+  delete_directory(workflow_configs["Disk"]["encoded_dir"])
+  delete_directory(workflow_configs["Disk"]["encoded_dir"])
 end
